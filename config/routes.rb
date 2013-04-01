@@ -1,8 +1,7 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
-
-  get "users/new"
-
+  #get "users/new"   behövs ej eftersom resources :users
+  # ger hela REST strukturen: GET, PUT, DELETE, POST
+  resources :users
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
